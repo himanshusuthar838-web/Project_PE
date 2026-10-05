@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Game On, Attendance Gone</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bungee&family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav">
+  <a class="logo" href="#top">GO/AG</a>
+  <nav>
+    <a href="#tournaments">Tournaments</a>
+    <a href="#leaderboard">Leaderboard</a>
+    <a href="#join">Join</a>
+  </nav>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="register" aria-hidden="true">
+      <div class="row head"><span>Player</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span></div>
+      <div class="row"><span>Riya</span><i>A</i><i>A</i><i>A</i><i>A</i></div>
+      <div class="row"><span>Kabir</span><i>A</i><i>A</i><i>A</i><i>A</i></div>
+      <div class="row"><span>Meera</span><i>A</i><i>A</i><i>A</i><i>A</i></div>
+      <div class="stamp">Gone for finals</div>
+    </div>
+    <h1>Game On,<br><s>Attendance</s> Gone</h1>
+    <p class="lead">Campus esports, open tournaments and a live leaderboard. Sign up, queue up and play for the top spot.</p>
+    <div class="actions">
+      <a class="btn primary" href="#join">Enter a tournament</a>
+      <a class="btn" href="#leaderboard">See the standings</a>
+    </div>
+  </section>
+
+  <section id="tournaments" class="section">
+    <h2>Upcoming tournaments</h2>
+    <div class="grid">
+      <article class="card">
+        <h3>Valorant 5v5 Clash</h3>
+        <p>Single-elimination bracket for teams of five. Best of three, finals on stage.</p>
+        <dl><div><dt>Starts</dt><dd>12 Oct</dd></div><div><dt>Prize pool</dt><dd>₹25,000</dd></div><div><dt>Slots left</dt><dd>6 of 32</dd></div></dl>
+        <a class="btn small" href="#join">Register a team</a>
+      </article>
+      <article class="card">
+        <h3>BGMI Squad Survival</h3>
+        <p>Four-round points lobby. Placement and kills both count toward your total.</p>
+        <dl><div><dt>Starts</dt><dd>19 Oct</dd></div><div><dt>Prize pool</dt><dd>₹15,000</dd></div><div><dt>Slots left</dt><dd>11 of 25</dd></div></dl>
+        <a class="btn small" href="#join">Register a squad</a>
+      </article>
+      <article class="card">
+        <h3>FC 26 Solo Cup</h3>
+        <p>One-on-one knockouts, 6-minute halves. Pick any club and bring your best formation.</p>
+        <dl><div><dt>Starts</dt><dd>26 Oct</dd></div><div><dt>Prize pool</dt><dd>₹8,000</dd></div><div><dt>Slots left</dt><dd>14 of 64</dd></div></dl>
+        <a class="btn small" href="#join">Register</a>
+      </article>
+    </div>
+  </section>
+
+  <section id="leaderboard" class="section">
+    <h2>Season leaderboard</h2>
+    <p class="sub">Points from every ranked match this season. Top 3 get a seed in the grand finale.</p>
+    <ol class="board">
+      <li style="--p:100%"><b>1</b><span class="name">NightRaven</span><span class="bar"></span><em>2,480</em></li>
+      <li style="--p:91%"><b>2</b><span class="name">Kabir_X</span><span class="bar"></span><em>2,260</em></li>
+      <li style="--p:84%"><b>3</b><span class="name">PixelPriya</span><span class="bar"></span><em>2,085</em></li>
+      <li style="--p:72%"><b>4</b><span class="name">ClutchKing</span><span class="bar"></span><em>1,790</em></li>
+      <li style="--p:63%"><b>5</b><span class="name">LagIsReal</span><span class="bar"></span><em>1,565</em></li>
+      <li style="--p:55%"><b>6</b><span class="name">Meera.gg</span><span class="bar"></span><em>1,370</em></li>
+    </ol>
+  </section>
+
+  <section id="join" class="section join">
+    <h2>Join the next match</h2>
+    <p class="sub">Add your gamer tag and pick a game. We'll email your bracket slot.</p>
+    <form onsubmit="event.preventDefault(); this.querySelector('.msg').textContent='Registered. Check your email for your slot.';">
+      <label>Gamer tag<input type="text" name="tag" required placeholder="e.g. NightRaven"></label>
+      <label>Email<input type="email" name="email" required placeholder="you@example.com"></label>
+      <label>Game
+        <select name="game">
+          <option>Valorant 5v5 Clash</option>
+          <option>BGMI Squad Survival</option>
+          <option>FC 26 Solo Cup</option>
+        </select>
+      </label>
+      <button class="btn primary" type="submit">Register now</button>
+      <p class="msg" role="status"></p>
+    </form>
+  </section>
+</main>
+
+<footer>
+  <p>Game On, Attendance Gone. Play fair, play loud.</p>
+</footer>
+
+</body>
+</html>
